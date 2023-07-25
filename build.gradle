@@ -34,6 +34,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "dev.matheusvictor.SantanerDevWeekApplication.java"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
